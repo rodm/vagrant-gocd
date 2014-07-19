@@ -2,13 +2,13 @@
 
 NTP_SERVER=time.euro.apple.com
 
-JDK=jdk1.7.0_55
-JDK_FILE=jdk-7u55-linux-x64.tar.gz
+JDK=jdk1.7.0_65
+JDK_FILE=jdk-7u65-linux-x64.tar.gz
 
-GO_VERSION=14.1.0
+GO_VERSION=14.2.0
 GO_NAME=go-server-${GO_VERSION}
-GO_ARCHIVE=${GO_NAME}-18882.zip
-GO_SERVER_URL=http://download01.thoughtworks.com/go/14.1.0/ga/$GO_ARCHIVE
+GO_ARCHIVE=${GO_NAME}-377.zip
+GO_SERVER_URL=http://download.go.cd/gocd/$GO_ARCHIVE
 GO_DIR=/opt/${GO_NAME}
 GO_USER=go
 GO_GROUP=go
