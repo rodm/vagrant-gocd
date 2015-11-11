@@ -1,7 +1,5 @@
 #!/bin/sh
 
-NTP_SERVER=time.euro.apple.com
-
 JDK=jdk1.7.0_65
 JDK_FILE=jdk-7u65-linux-x64.tar.gz
 
@@ -15,21 +13,14 @@ GO_GROUP=go
 
 # Install various packages required to run a Go Agent
 if [ -f /etc/redhat-release ]; then
-    yum -y install ntp
     yum -y install unzip
 else
     apt-get update -y
-    apt-get install -y -q ntp
     apt-get install -y -q unzip
     apt-get install -y -q subversion
     apt-get install -y -q mercurial
     apt-get install -y -q git
 fi
-
-# Configure /etc/ntp.conf to use server
-sudo /etc/init.d/ntp stop
-sed -e "s/^server.*$/server $NTP_SERVER/g" < /etc/ntp.conf > /tmp/ntp.conf && sudo mv /tmp/ntp.conf /etc/ntp.conf
-sudo /etc/init.d/ntp start
 
 cat >> /etc/hosts <<EOF
 192.168.80.40   goserver.localdomain goserver
