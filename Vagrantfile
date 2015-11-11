@@ -10,10 +10,11 @@ centos64_box = 'centos64'
 centos64_url = 'http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box'
 
 nodes = [
-  { :hostname => 'goserver', :ip => '192.168.80.40', :ram => '2048' },
-  { :hostname => 'agent01',  :ip => '192.168.80.41', :ram => '2048' },
-  { :hostname => 'agent02',  :ip => '192.168.80.42', :ram => '2048', :box => precise64_box, :url => precise64_url },
-  { :hostname => 'agent03',  :ip => '192.168.80.43', :ram => '2048', :box => centos64_box, :url => centos64_url }
+  { :hostname => 'goserver',  :ip => '192.168.80.40', :ram => '2048' },
+  { :hostname => 'goagent01', :ip => '192.168.80.41', :ram => '2048' },
+  { :hostname => 'goagent02', :ip => '192.168.80.42', :ram => '2048', :box => precise64_box, :url => precise64_url },
+  { :hostname => 'goagent03', :ip => '192.168.80.43', :ram => '2048', :box => centos64_box, :url => centos64_url },
+  { :hostname => 'goagent04', :ip => '192.168.80.44', :ram => '2048', :box => centos64_box, :url => centos64_url }
 ]
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
